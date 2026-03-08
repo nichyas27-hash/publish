@@ -16,24 +16,25 @@ from pathlib import Path
 css_path = Path(__file__).parent / "style.css"
 with open(css_path) as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    
 df = pd.read_excel(
-    'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
+    '[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='Inflasi',
 )
 df_yoy = pd.read_excel(
-    'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
+    '[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='y-o-y',
 )
 yoy = pd.read_excel(
-    'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
+    '[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='YoY',
 )
 df_mom = pd.read_excel(
-    'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
+    '[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='m-o-m',
 )
 mom = pd.read_excel(
-    'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
+    '[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='MoM',
 )
 yoy['Tahun'] = pd.to_datetime(yoy['Tahun'])
@@ -148,6 +149,7 @@ with st.container():
     </div>
 
     """, unsafe_allow_html=True)
+
 
 
 
