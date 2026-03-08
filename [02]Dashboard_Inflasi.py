@@ -10,10 +10,12 @@ st.set_page_config(
     layout='wide',
     page_icon='bar-chart'
 )
-css_file = Path("[02]Series Inflasi Kota Surabaya 2025/style.css")
-st.markdown(
-    f"<style>{css_file.read_text()}</style>", unsafe_allow_html=True
-)
+import streamlit as st
+from pathlib import Path
+
+css_path = Path(__file__).parent / "style.css"
+with open(css_path) as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 df = pd.read_excel(
     'C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/[02]Inflasi Kota Surabaya 2025.xlsx',
     sheet_name='Inflasi',
@@ -146,5 +148,6 @@ with st.container():
     </div>
 
     """, unsafe_allow_html=True)
+
 
 
