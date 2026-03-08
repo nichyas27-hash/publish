@@ -10,7 +10,7 @@ st.set_page_config(
     layout='wide',
     page_icon='bar-chart'
 )
-css_file = Path("https://github.com/nichyas27-hash/publish/blob/main/style.css")
+css_file = Path("C:/Users/Lenovo/Desktop/BearLearn/publish/[02]Series Inflasi Kota Surabaya 2025/style.css")
 st.markdown(
     f"<style>{css_file.read_text()}</style>", unsafe_allow_html=True
 )
@@ -146,3 +146,4 @@ with st.container():
     </div>
 
     """, unsafe_allow_html=True)
+
