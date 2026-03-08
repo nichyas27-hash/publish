@@ -10,7 +10,7 @@ st.set_page_config(
     layout='wide',
     page_icon='bar-chart'
 )
-css_file = Path("C:/Users/Lenovo/Desktop/BearLearn/[03] KERJA PRAKTIK/[02]Data_Awal/[02]Series Inflasi Kota Surabaya 2025/style.css")
+css_file = Path("https://github.com/nichyas27-hash/publish/blob/main/style.css")
 st.markdown(
     f"<style>{css_file.read_text()}</style>", unsafe_allow_html=True
 )
@@ -144,4 +144,5 @@ with st.container():
         <p style='color:#fffbee'> Powered by Streamlit </p>
         <p style='color:#fffbee'> Created by Jaya Perkasa </p>
     </div>
+
     """, unsafe_allow_html=True)
